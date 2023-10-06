@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Box with Split</title>
+    <style>
+        /* Resetting margin and padding for both body and html */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .box {
+            width: 940px;
+            height: 620px;
+            background-color: #FBFBFB;
+            border-radius: 15px;
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.15);
+            display: flex;
+        }
+        
+        .left-half {
+            flex: 1;
+            background-color: #FBFBFB;
+            border-radius: 15px 0 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        
+        .right-half {
+            flex: 1;
+            background-color: #0074D9;
+            border-radius: 0 15px 15px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Circular elements */
+        .circle1 {
+            width: 431px;
+            height: 425px;
+            background-color: #4EA4F7;
+            border-radius: 50%;
+            position: absolute;
+            top: 77px;
+            left: 10px;
+        }
+
+        .circle2 {
+            width: 331px;
+            height: 321px;
+            background-color: #64A9F8;
+            border-radius: 50%;
+            position: absolute;
+            top: 129px;
+            left: 60px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add your image inside the inner circular element */
+        .circle2 img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Adjust form styles */
+        .registration-form {
+            color: #0074D9;
+            text-align: left;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .registration-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .registration-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #0074D9;
+            border-radius: 5px;
+        }
+
+        /* Adjust radio button styles */
+        .radio-group {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .radio-group label {
+            margin-right: 10px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            height: 63px;
+            background-color: #A9C6F9;
+            color: #fff;
+            padding: 20px;
+        }
+        .header img {
+            width: 180px;
+            height: auto;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="./home.html">  <img src="file:///D:/Final%20Project/image/2 (1).png" alt="Your Logo"> </a>
+    </div>
+    <div class="box">
+        <div class="left-half">
+            <img src="your-logo-image-url.jpg" alt="Logo" class="logo">
+            <div class="registration-form">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="number">Number:</label>
+                <input type="tel" id="number" name="number" required>
+                
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <label for="gender">Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+        </div>
+        <div class="right-half">
+            <!-- Circular elements -->
+            <div class="circle1"></div>
+            <div class="circle2">
+                <!-- Add your image here -->
+                <img src="your-inner-image-url.jpg" alt="Inner Image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
